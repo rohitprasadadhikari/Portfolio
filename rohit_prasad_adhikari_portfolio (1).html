@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Prasad Adhikari | IT Technician & Network/CCTV Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter, Outfit, Mukta -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Mukta:wght@400;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        techDark: {
+                            800: '#0f172a',
+                            900: '#0b1329',
+                            950: '#050914',
+                        },
+                        cyanAccent: {
+                            400: '#38bdf8',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                        },
+                        goldAccent: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Outfit', 'Mukta', 'sans-serif'],
+                        heading: ['Outfit', 'Inter', 'sans-serif'],
+                        nepali: ['Mukta', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Outfit', 'Mukta', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .glass-nav {
+            background: rgba(11, 19, 41, 0.85);
+            backdrop-filter: blur(16px);
+        }
+        .light .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+        }
+        .text-gradient-cyan {
+            background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 50%, #0e7490 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050914;
+        }
+        .light ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #06b6d4;
+            border-radius: 4px;
+        }
+        .toast-animate {
+            animation: slideInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes slideInUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-techDark-950 text-slate-100 dark:bg-techDark-950 dark:text-slate-100 light:bg-slate-50 light:text-slate-900 transition-colors duration-300 min-h-screen flex flex-col selection:bg-cyanAccent-500 selection:text-techDark-950">
+
+    <header class="sticky top-0 z-50 glass-nav border-b border-slate-800/80 dark:border-slate-800/80 light:border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo & Name -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-cyanAccent-400 to-cyanAccent-600 text-techDark-950 font-black flex items-center justify-center text-xl shadow-lg shadow-cyanAccent-500/20 group-hover:scale-105 transition-transform">
+                        RPA
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight block font-heading text-slate-100 dark:text-slate-100 light:text-slate-900">
+                            Rohit Prasad Adhikari
+                        </span>
+                        <span class="text-xs font-semibold text-cyanAccent-400 font-nepali block -mt-1">
+                            रोहित प्रसाद अधिकारी | IT Technician
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-300 dark:text-slate-300 light:text-slate-700">
+                    <a href="#about" class="hover:text-cyanAccent-400 transition-colors">परिचय (About)</a>
+                    <a href="#experience" class="hover:text-cyanAccent-400 transition-colors">अनुभव (Experience)</a>
+                    <a href="#skills" class="hover:text-cyanAccent-400 transition-colors">सीपहरू (Skills)</a>
+                    <a href="#projects" class="hover:text-cyanAccent-400 transition-colors">प्रोजेक्टहरू (Projects)</a>
+                    <a href="#gallery" class="hover:text-cyanAccent-400 transition-colors flex items-center space-x-1 text-goldAccent-400">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>ग्यालरी (Gallery)</span>
+                    </a>
+                    <a href="#contact" class="hover:text-cyanAccent-400 transition-colors">सम्पर्क (Contact)</a>
+                </nav>
+
+                <!-- Actions Right -->
+                <div class="flex items-center space-x-3">
+                    <button id="theme-toggle" onclick="toggleTheme()" class="w-10 h-10 rounded-xl bg-slate-800/80 dark:bg-slate-800/80 light:bg-slate-200 flex items-center justify-center text-amber-400 hover:text-amber-300 transition-colors shadow-inner" title="Toggle Light/Dark Theme">
+                        <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    </button>
+                    
+                    <a href="https://wa.me/9779827872066" target="_blank" class="hidden sm:inline-flex bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2.5 rounded-xl text-sm transition shadow-lg shadow-emerald-500/20 active:scale-95 items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp</span>
+                    </a>
+
+                    <!-- Mobile Menu Hamburger -->
+                    <button onclick="toggleMobileMenu()" class="lg:hidden text-2xl text-slate-300 hover:text-white focus:outline-none p-2">
+                        <i id="menu-icon" class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-techDark-900/95 dark:bg-techDark-900/95 light:bg-white/95 border-b border-slate-800 px-6 py-5 space-y-3 font-semibold text-sm">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyanAccent-400">परिचय (About Me)</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyanAccent-400">अनुभव (Experience)</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyanAccent-400">प्राविधिक सीप (Skills)</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyanAccent-400">प्रोजेक्टहरू (Projects)</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 text-goldAccent-400 font-bold"><i class="fa-solid fa-camera mr-2"></i>फोटो ग्यालरी (Photo Gallery)</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyanAccent-400">सम्पर्क (Contact)</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+        <!-- Ambient Glow Elements -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-cyanAccent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-goldAccent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <div class="inline-flex items-center space-x-2 bg-cyanAccent-500/10 border border-cyanAccent-500/30 px-4 py-2 rounded-full text-cyanAccent-400 font-semibold text-xs sm:text-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-cyanAccent-400 animate-ping"></span>
+                        <span>Available for IT Support, CCTV & Network Deployment</span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h2 class="text-cyanAccent-400 text-lg sm:text-xl font-bold tracking-wide font-nepali">
+                            नमस्ते! म रोहित प्रसाद अधिकारी
+                        </h2>
+                        <h1 class="text-4xl sm:text-6xl font-black font-heading tracking-tight text-white dark:text-white light:text-slate-900 leading-none">
+                            Rohit Prasad <br class="hidden sm:inline">
+                            <span class="text-gradient-cyan">Adhikari</span>
+                        </h1>
+                        <p class="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 light:text-slate-700 pt-1">
+                            Computer IT Technician | Hardware, Software & Network Support | Web & CCTV Specialist
+                        </p>
+                    </div>
+
+                    <p class="text-sm sm:text-base text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        ६+ वर्ष भन्दा बढी IT हार्डवेयर, नेटवर्क कन्फिगरेसन, CCTV जडान (IP & Fiber) र कर्पोरेट/इन्स्योरेन्स अफिसहरूमा भरपर्दो प्राविधिक सहयोग प्रदान गर्दै आएको एक अनुभवी IT Technician।
+                    </p>
+
+                    <!-- Contact Quick Pills -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2 text-xs font-semibold text-slate-300">
+                        <a href="tel:+9779827872066" class="bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/80 px-3.5 py-2 rounded-xl flex items-center space-x-2 transition">
+                            <i class="fa-solid fa-phone text-cyanAccent-400"></i>
+                            <span>+977-9827872066</span>
+                        </a>
+                        <a href="mailto:rohitprasadadhikari11@gmail.com" class="bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700/80 px-3.5 py-2 rounded-xl flex items-center space-x-2 transition">
+                            <i class="fa-solid fa-envelope text-amber-400"></i>
+                            <span>rohitprasadadhikari11@gmail.com</span>
+                        </a>
+                        <span class="bg-slate-800/90 border border-slate-700/80 px-3.5 py-2 rounded-xl flex items-center space-x-2">
+                            <i class="fa-solid fa-location-dot text-rose-400"></i>
+                            <span>Manthali, Ramechhap, Nepal</span>
+                        </span>
+                    </div>
+
+                    <!-- CTA Actions -->
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                        <button onclick="downloadCV()" class="bg-gradient-to-r from-cyanAccent-500 to-cyanAccent-600 hover:from-cyanAccent-600 hover:to-cyanAccent-700 text-techDark-950 font-extrabold px-7 py-3.5 rounded-2xl transition shadow-xl shadow-cyanAccent-500/25 active:scale-95 flex items-center space-x-2">
+                            <i class="fa-solid fa-download text-lg"></i>
+                            <span>Download Resume (CV)</span>
+                        </button>
+                        <a href="#gallery" class="bg-gradient-to-r from-goldAccent-500 to-goldAccent-600 hover:from-goldAccent-600 hover:to-goldAccent-700 text-techDark-950 px-6 py-3.5 rounded-2xl font-black transition flex items-center space-x-2 shadow-lg shadow-goldAccent-500/20 active:scale-95">
+                            <i class="fa-solid fa-images"></i>
+                            <span>हेर्नुहोस् फोटो ग्यालरी</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right Profile Avatar & Quick Identity Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-cyanAccent-500 to-goldAccent-500 rounded-3xl blur-md opacity-40"></div>
+                        
+                        <div class="relative glass-card rounded-3xl p-8 text-center space-y-6 shadow-2xl">
+                            <div class="relative inline-block mx-auto">
+                                <!-- Profile Photo Box with Image or Graphic Frame -->
+                                <div class="w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-gradient-to-br from-slate-800 to-techDark-900 border-4 border-cyanAccent-500/50 p-2 flex items-center justify-center shadow-2xl mx-auto overflow-hidden">
+                                    <img src="Profile Photo.png" alt="Rohit Prasad Adhikari" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/400x400/0b1329/38bdf8?text=ROHIT+P.+ADHIKARI';">
+                                </div>
+                                <div class="absolute bottom-2 right-2 bg-cyanAccent-500 text-techDark-950 text-xs font-black px-3 py-1.5 rounded-full shadow-lg border border-techDark-950">
+                                    <i class="fa-solid fa-shield-halved mr-1"></i> VERIFIED IT
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-2xl font-black text-white dark:text-white light:text-slate-900 font-heading">
+                                    Rohit Prasad Adhikari
+                                </h3>
+                                <p class="text-xs font-bold text-cyanAccent-400 font-nepali mt-1">
+                                    कम्प्युटर हार्डवेयर, नेटवर्क तथा CCTV विज्ञ
+                                </p>
+                                <p class="text-xs text-slate-400 mt-2 font-medium">
+                                    Sagarmatha Lumbini Insurance Ltd. | Numbur IT Solution
+                                </p>
+                            </div>
+
+                            <!-- Languages Pill Bar -->
+                            <div class="pt-2 border-t border-slate-800/80">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Languages Spoken</span>
+                                <div class="flex justify-center space-x-2 text-xs font-bold">
+                                    <span class="bg-cyanAccent-500/10 text-cyanAccent-400 px-3 py-1 rounded-lg border border-cyanAccent-500/20">Nepali</span>
+                                    <span class="bg-cyanAccent-500/10 text-cyanAccent-400 px-3 py-1 rounded-lg border border-cyanAccent-500/20">English</span>
+                                    <span class="bg-cyanAccent-500/10 text-cyanAccent-400 px-3 py-1 rounded-lg border border-cyanAccent-500/20">Hindi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass-card p-5 rounded-2xl text-center space-y-1 border-t-2 border-cyanAccent-500">
+                    <div class="text-3xl font-black text-gradient-cyan font-heading">6+ Years</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">IT Field Experience</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center space-y-1 border-t-2 border-goldAccent-500">
+                    <div class="text-3xl font-black text-gradient-gold font-heading">25+ Sites</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">CCTV & Fiber Installs</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center space-y-1 border-t-2 border-cyanAccent-500">
+                    <div class="text-3xl font-black text-gradient-cyan font-heading">20+ Nodes</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Office Networks Setup</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl text-center space-y-1 border-t-2 border-goldAccent-500">
+                    <div class="text-3xl font-black text-gradient-gold font-heading">100%</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Client Satisfaction</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-techDark-900/60 dark:bg-techDark-900/60 light:bg-slate-100/90 border-y border-slate-800/80 light:border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-cyanAccent-400 font-bold text-sm tracking-wider uppercase">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <span>About Me / मेरो बारेमा</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-black font-heading tracking-tight text-white dark:text-white light:text-slate-900">
+                        Practical IT Solutions for <span class="text-gradient-cyan">Enterprises & Offices</span>
+                    </h2>
+
+                    <div class="space-y-4 text-slate-300 dark:text-slate-300 light:text-slate-700 text-sm sm:text-base leading-relaxed">
+                        <p>
+                            I am a skilled and dedicated <strong>Computer IT Technician</strong> with over 6 years of hands-on experience in computer hardware, network design, CCTV installation, system troubleshooting, and enterprise IT support.
+                        </p>
+                        <p>
+                            Currently working at <strong>Sagarmatha Lumbini Insurance Company Ltd.</strong> in Kathmandu, I manage IT infrastructure, server backup, printer sharing, network security, and staff technical support. My background spans working with IT service companies, insurance firms, educational institutions, and government offices.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-semibold text-xs sm:text-sm text-slate-200 dark:text-slate-200 light:text-slate-800">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-circle-check text-cyanAccent-400"></i>
+                            <span>Hardware Maintenance</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-circle-check text-cyanAccent-400"></i>
+                            <span>CCTV (IP & Fiber) Systems</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-circle-check text-cyanAccent-400"></i>
+                            <span>Mikrotik / Router Setup</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-circle-check text-cyanAccent-400"></i>
+                            <span>HTML/CSS Web Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highlight Features Box -->
+                <div class="lg:col-span-6">
+                    <div class="glass-card p-8 rounded-3xl space-y-6 border border-cyanAccent-500/20 shadow-2xl">
+                        <h3 class="text-xl font-bold font-heading text-white dark:text-white light:text-slate-900 border-b border-slate-800 pb-3">
+                            <i class="fa-solid fa-award text-goldAccent-400 mr-2"></i>Key Strengths & Competencies
+                        </h3>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-lg shrink-0">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white dark:text-white light:text-slate-900">Hardware & System Diagnostics</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Desktop/laptop repair, component replacement, OS formatting, driver & software installation.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-lg shrink-0">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white dark:text-white light:text-slate-900">Networking & Security</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">LAN/WAN cabling, Wi-Fi router setup, Mikrotik configuration, switch management, virus removal.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-goldAccent-500/10 text-goldAccent-400 flex items-center justify-center text-lg shrink-0">
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white dark:text-white light:text-slate-900">CCTV & Surveillance Specialist</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">End-to-end IP camera and fiber optic setup for Hikvision, CP Plus, and Dahua systems.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div class="inline-flex items-center space-x-2 text-cyanAccent-400 font-bold text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Work History / कार्य अनुभव</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black font-heading tracking-tight">
+                    Professional Experience
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-400">
+                    6+ years of dedicated service in corporate IT support, networking firms, and client services.
+                </p>
+            </div>
+
+            <!-- Vertical Timeline -->
+            <div class="relative border-l-2 border-cyanAccent-500/30 ml-4 sm:ml-8 space-y-12">
+                
+                <!-- Experience Item 1 -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-techDark-950 border-2 border-cyanAccent-400 text-cyanAccent-400 flex items-center justify-center text-xs font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-3 border-l-4 border-l-cyanAccent-500">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs font-black text-cyanAccent-400 uppercase tracking-widest bg-cyanAccent-500/10 px-3 py-1 rounded-full border border-cyanAccent-500/20">2022 - PRESENT</span>
+                            <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-location-dot mr-1"></i>Kathmandu, Nepal</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white dark:text-white light:text-slate-900">IT Support Technician</h3>
+                        <p class="text-sm font-extrabold text-goldAccent-400">Sagarmatha Lumbini Insurance Company Ltd.</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 pt-1 list-disc list-inside">
+                            <li>Maintained computer and network systems across the head office and branches.</li>
+                            <li>Performed hardware troubleshooting, system formatting, and software upgrades.</li>
+                            <li>Supported internal staff with email setup, printer sharing, domain access, and automated system backup.</li>
+                            <li>Assisted in cybersecurity awareness, firewall efficiency, and antivirus maintenance.</li>
+                            <li>Received official appreciation for punctuality, professionalism, and technical contributions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-techDark-950 border-2 border-goldAccent-400 text-goldAccent-400 flex items-center justify-center text-xs font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-3 border-l-4 border-l-goldAccent-500">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs font-black text-goldAccent-400 uppercase tracking-widest bg-goldAccent-500/10 px-3 py-1 rounded-full border border-goldAccent-500/20">2018 - 2022</span>
+                            <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-location-dot mr-1"></i>Manthali, Ramechhap, Nepal</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white dark:text-white light:text-slate-900">Computer IT Technician</h3>
+                        <p class="text-sm font-extrabold text-cyanAccent-400">Numbur IT Solution</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 pt-1 list-disc list-inside">
+                            <li>Delivered full-scale hardware/software support to business clients, schools, and government offices.</li>
+                            <li>Installed routers, switches, and deployed fiber and wireless network infrastructure.</li>
+                            <li>Handled IP & analog CCTV installations across 25+ commercial sites and educational institutions.</li>
+                            <li>Designed basic websites using HTML/CSS for local businesses and schools.</li>
+                            <li>Provided ongoing IT support, client technical training, and preventive maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="relative pl-8 sm:pl-10 group">
+                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-techDark-950 border-2 border-slate-500 text-slate-400 flex items-center justify-center text-xs font-bold group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-3 border-l-4 border-l-slate-600">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs font-black text-slate-400 uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full">2017 - 2018</span>
+                            <span class="text-xs text-slate-400 font-medium"><i class="fa-solid fa-location-dot mr-1"></i>Kathmandu, Nepal</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-white dark:text-white light:text-slate-900">IT Support Assistant</h3>
+                        <p class="text-sm font-extrabold text-slate-300">Third Eye IT Solution</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-300 dark:text-slate-300 light:text-slate-600 pt-1 list-disc list-inside">
+                            <li>Assisted with desktop setups, LAN cable crimping & configuration, and OS troubleshooting.</li>
+                            <li>Supported field technicians with CCTV installations, minor hardware repairs, and system formatting.</li>
+                            <li>Gained hands-on experience in hardware diagnostics and corporate client support.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-techDark-900/60 dark:bg-techDark-900/60 light:bg-slate-100/90 border-y border-slate-800/80 light:border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="inline-flex items-center space-x-2 text-cyanAccent-400 font-bold text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Skills & Tools / प्राविधिक क्षमता</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black font-heading tracking-tight">
+                    Technical Tools & Core Competencies
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-400">
+                    Comprehensive skill set covering hardware repair, network setup, surveillance systems, and web tools.
+                </p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div id="skills-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically Rendered Skills Cards -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div class="inline-flex items-center space-x-2 text-cyanAccent-400 font-bold text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Projects & Milestones / मुख्य कामहरू</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black font-heading tracking-tight">
+                    Key Projects & Achievements
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Project Card 1 -->
+                <div class="glass-card p-6 rounded-3xl space-y-4 border border-slate-800/80 hover:border-cyanAccent-500/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-goldAccent-400 bg-goldAccent-500/10 px-3 py-1 rounded-full border border-goldAccent-500/20">25+ Sites</span>
+                        <h3 class="text-lg font-bold font-heading text-white dark:text-white light:text-slate-900">CCTV & Fiber Network Deployments</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Installed IP/Fiber cameras and surveillance setups across schools, commercial shops, and offices in Ramechhap and Kathmandu.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-[11px] font-bold text-cyanAccent-400">
+                        Hikvision • CP Plus • Dahua
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass-card p-6 rounded-3xl space-y-4 border border-slate-800/80 hover:border-cyanAccent-500/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-cyanAccent-400 bg-cyanAccent-500/10 px-3 py-1 rounded-full border border-cyanAccent-500/20">20+ Workstations</span>
+                        <h3 class="text-lg font-bold font-heading text-white dark:text-white light:text-slate-900">Enterprise Network Setup</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Configured complete LAN cable management, switch cascading, domain access, and printer sharing for corporate offices.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-[11px] font-bold text-cyanAccent-400">
+                        Mikrotik • D-Link • TP-Link
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="glass-card p-6 rounded-3xl space-y-4 border border-slate-800/80 hover:border-cyanAccent-500/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-goldAccent-500/10 text-goldAccent-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-goldAccent-400 bg-goldAccent-500/10 px-3 py-1 rounded-full border border-goldAccent-500/20">Insurance IT</span>
+                        <h3 class="text-lg font-bold font-heading text-white dark:text-white light:text-slate-900">Insurance Office Tech Support</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Provided IT support, antivirus deployments, email server setup, and daily technical assistance at Sagarmatha Lumbini Insurance.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-[11px] font-bold text-amber-400">
+                        Kathmandu Head Office
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="glass-card p-6 rounded-3xl space-y-4 border border-slate-800/80 hover:border-cyanAccent-500/50 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-cyanAccent-400 bg-cyanAccent-500/10 px-3 py-1 rounded-full border border-cyanAccent-500/20">Web Design</span>
+                        <h3 class="text-lg font-bold font-heading text-white dark:text-white light:text-slate-900">Local Business Websites</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Developed responsive web pages using HTML, CSS, and basic JavaScript for local businesses and schools.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-[11px] font-bold text-cyanAccent-400">
+                        HTML5 • CSS3 • JavaScript
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-techDark-900/80 dark:bg-techDark-900/80 light:bg-slate-100/90 border-y border-slate-800/80 light:border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="space-y-3">
+                    <div class="inline-flex items-center space-x-2 text-goldAccent-400 font-bold text-sm tracking-wider uppercase">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Work Showcase / फोटो ग्यालरी</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-black font-heading tracking-tight">
+                        Interactive Photo Gallery
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-400">
+                        Explore field work photos, CCTV camera setups, hardware maintenance, and office IT environments.
+                    </p>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="flex flex-wrap gap-2" id="gallery-filters">
+                    <button onclick="filterGallery('all')" class="gallery-btn active bg-cyanAccent-500 text-techDark-950 font-bold px-4 py-2 rounded-xl text-xs transition shadow-md">सबै (All)</button>
+                    <button onclick="filterGallery('cctv')" class="gallery-btn bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-4 py-2 rounded-xl text-xs transition">CCTV & Fiber</button>
+                    <button onclick="filterGallery('hardware')" class="gallery-btn bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-4 py-2 rounded-xl text-xs transition">Hardware Repair</button>
+                    <button onclick="filterGallery('office')" class="gallery-btn bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-4 py-2 rounded-xl text-xs transition">Office IT Support</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Photo Gallery Grid -->
+            <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically injected gallery cards -->
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Education -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-cyanAccent-400 font-bold text-sm tracking-wider uppercase">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Education / शैक्षिक योग्यता</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black font-heading tracking-tight">
+                        Academic Qualifications
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div class="glass-card p-6 rounded-3xl space-y-2 border-l-4 border-l-cyanAccent-500">
+                            <span class="text-xs font-black text-cyanAccent-400 uppercase bg-cyanAccent-500/10 px-3 py-1 rounded-full">2017 - 2020</span>
+                            <h3 class="text-lg font-bold font-heading text-white dark:text-white light:text-slate-900">Diploma in Computer Hardware & Software</h3>
+                            <p class="text-xs font-bold text-slate-400">Information Technology of Institute Pvt. Ltd - Nepal</p>
+                            <p class="text-xs text-slate-300 mt-1">Specialized training in motherboard diagnostics, software installation, hardware repair, and network configuration.</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-3xl space-y-2 border-l-4 border-l-goldAccent-500">
+                            <span class="text-xs font-black text-goldAccent-400 uppercase bg-goldAccent-500/10 px-3 py-1 rounded-full">+2 Level</span>
+                            <h3 class="text-lg font-bold font-heading text-white dark:text-white light:text-slate-900">+2 Secondary Education</h3>
+                            <p class="text-xs font-bold text-slate-400">Jan Jagriti Secondary School - Bardibas, Mahottari, Nepal</p>
+                            <p class="text-xs text-slate-300 mt-1">Completed secondary level education focusing on computer fundamentals and core sciences.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-goldAccent-400 font-bold text-sm tracking-wider uppercase">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Certifications / प्रमाणपत्र</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black font-heading tracking-tight">
+                        Training & Certifications
+                    </h2>
+
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-4 border border-goldAccent-500/30">
+                        <div class="flex items-center space-x-3 border-b border-slate-800 pb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-goldAccent-500/10 text-goldAccent-400 flex items-center justify-center text-2xl shrink-0">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold font-heading text-white dark:text-white light:text-slate-900">Diploma in Computer Course</h3>
+                                <p class="text-xs text-goldAccent-400 font-bold">Numbur IT Solution, Manthali Ramechhap (2075/01/07 - 2075/06/07)</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 font-medium pt-2">
+                            <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyanAccent-400"></i><span>Computer Fundamentals</span></div>
+                            <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyanAccent-400"></i><span>Networking Basics</span></div>
+                            <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyanAccent-400"></i><span>Hardware Maintenance</span></div>
+                            <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyanAccent-400"></i><span>MS Office Suite</span></div>
+                            <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyanAccent-400"></i><span>HTML, CSS & Java</span></div>
+                            <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyanAccent-400"></i><span>Photoshop & PageMaker</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-techDark-900/60 dark:bg-techDark-900/60 light:bg-slate-100/90 border-t border-slate-800/80 light:border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-3">
+                        <div class="inline-flex items-center space-x-2 text-cyanAccent-400 font-bold text-sm tracking-wider uppercase">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>Get In Touch / सम्पर्क गर्नुहोस्</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-black font-heading tracking-tight">
+                            Let's Connect for IT Services & Support
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                            Need CCTV installation, computer maintenance, fiber cabling, or office IT support? Call or send a direct message.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <a href="tel:+9779827872066" class="flex items-center space-x-4 p-4 glass-card rounded-2xl hover:border-cyanAccent-500/50 transition">
+                            <div class="w-12 h-12 rounded-xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Phone / Direct Call</h4>
+                                <p class="text-sm font-extrabold text-white dark:text-white light:text-slate-900">+977-9827872066</p>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/9779827872066" target="_blank" class="flex items-center space-x-4 p-4 glass-card rounded-2xl hover:border-emerald-500/50 transition">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">WhatsApp Message</h4>
+                                <p class="text-sm font-extrabold text-white dark:text-white light:text-slate-900">+977-9827872066</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:rohitprasadadhikari11@gmail.com" class="flex items-center space-x-4 p-4 glass-card rounded-2xl hover:border-amber-500/50 transition">
+                            <div class="w-12 h-12 rounded-xl bg-goldAccent-500/10 text-goldAccent-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Address</h4>
+                                <p class="text-sm font-extrabold text-white dark:text-white light:text-slate-900">rohitprasadadhikari11@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center space-x-4 p-4 glass-card rounded-2xl">
+                            <div class="w-12 h-12 rounded-xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Location / ठेगाना</h4>
+                                <p class="text-sm font-extrabold text-white dark:text-white light:text-slate-900">Manthali, Ramechhap & Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Contact Form -->
+                <div class="lg:col-span-7">
+                    <form onsubmit="handleContactSubmit(event)" class="glass-card p-8 rounded-3xl space-y-6 shadow-2xl">
+                        <h3 class="text-xl font-bold font-heading text-white dark:text-white light:text-slate-900">
+                            Send Direct IT Service Inquiry
+                        </h3>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Your Name / नाम</label>
+                                <input type="text" id="contact-name" required placeholder="e.g. Ramesh Thapa" class="w-full bg-techDark-900/90 dark:bg-techDark-900/90 light:bg-slate-100 border border-slate-800 dark:border-slate-800 light:border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyanAccent-500 text-slate-100 dark:text-slate-100 light:text-slate-900">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Phone / Phone Number</label>
+                                <input type="text" id="contact-phone" required placeholder="e.g. 9800000000" class="w-full bg-techDark-900/90 dark:bg-techDark-900/90 light:bg-slate-100 border border-slate-800 dark:border-slate-800 light:border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyanAccent-500 text-slate-100 dark:text-slate-100 light:text-slate-900">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Service Required / सेवा</label>
+                            <select id="contact-service" class="w-full bg-techDark-900/90 dark:bg-techDark-900/90 light:bg-slate-100 border border-slate-800 dark:border-slate-800 light:border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyanAccent-500 text-slate-100 dark:text-slate-100 light:text-slate-900">
+                                <option value="CCTV Installation">CCTV Installation (IP / Fiber)</option>
+                                <option value="Hardware Maintenance">Computer / Laptop Repair</option>
+                                <option value="Network Configuration">Office Networking & Wi-Fi</option>
+                                <option value="Web Design">Web Design (HTML/CSS)</option>
+                                <option value="Other IT Support">General IT Support</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Message / विवरण</label>
+                            <textarea id="contact-message" rows="4" required placeholder="Explain your requirement here..." class="w-full bg-techDark-900/90 dark:bg-techDark-900/90 light:bg-slate-100 border border-slate-800 dark:border-slate-800 light:border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-cyanAccent-500 text-slate-100 dark:text-slate-100 light:text-slate-900"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-cyanAccent-500 to-cyanAccent-600 hover:from-cyanAccent-600 hover:to-cyanAccent-700 text-techDark-950 font-extrabold py-3.5 rounded-xl transition shadow-lg shadow-cyanAccent-500/20 active:scale-95 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Send Message to Rohit</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-techDark-950 dark:bg-techDark-950 light:bg-slate-200 border-t border-slate-800/80 light:border-slate-300 py-10 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <p class="font-bold text-slate-300 dark:text-slate-300 light:text-slate-800 text-sm">
+                Rohit Prasad Adhikari (रोहित प्रसाद अधिकारी)
+            </p>
+            <p>Computer IT Technician | Hardware, Software & Network Support | Web & CCTV Specialist</p>
+            <p>© <span id="year-span">2026</span> All Rights Reserved | Manthali, Ramechhap & Kathmandu, Nepal</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Photo Gallery -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 transition-all">
+        <div class="relative max-w-4xl w-full bg-techDark-900 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl flex flex-col md:flex-row">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center text-xl hover:bg-rose-600 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="md:w-3/5 bg-black flex items-center justify-center">
+                <img id="lightbox-img" src="" alt="Gallery Preview" class="max-h-[70vh] object-contain w-full">
+            </div>
+            <div class="md:w-2/5 p-6 space-y-4 flex flex-col justify-between">
+                <div class="space-y-2">
+                    <span id="lightbox-tag" class="text-[10px] font-black uppercase tracking-wider text-cyanAccent-400 bg-cyanAccent-500/10 px-3 py-1 rounded-full border border-cyanAccent-500/20"></span>
+                    <h3 id="lightbox-title" class="text-xl font-bold font-heading text-white"></h3>
+                    <p id="lightbox-desc" class="text-xs text-slate-300 leading-relaxed"></p>
+                </div>
+                <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+                    <span><i class="fa-solid fa-location-dot mr-1 text-cyanAccent-400"></i> Nepal</span>
+                    <a href="https://wa.me/9779827872066" target="_blank" class="bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center space-x-1">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Inquire</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-6 left-6 z-50 space-y-2 pointer-events-none"></div>
+
+    <script>
+        // Data derived strictly from CV
+        const skillsData = [
+            { title: "Hardware Troubleshooting", icon: "fa-solid fa-screwdriver-wrench", level: 95, desc: "Desktop/laptop diagnostics, motherboard component replacement, RAM/SSD upgrades." },
+            { title: "CCTV Installation (IP & Fiber)", icon: "fa-solid fa-video", level: 92, desc: "Hikvision, Dahua, CP Plus camera mounting, NVR/DVR setup, fiber termination." },
+            { title: "Network Configuration", icon: "fa-solid fa-network-wired", level: 90, desc: "D-Link, TP-Link, Mikrotik router config, switch cabling, wireless access points." },
+            { title: "System & Software Support", icon: "fa-solid fa-window-restore", level: 94, desc: "Windows 7/10/11, Basic Linux, MS Office, antivirus deployment, virus removal." },
+            { title: "Web Design & Graphics", icon: "fa-solid fa-code", level: 85, desc: "Responsive HTML5, CSS3, basic JavaScript, Photoshop, PageMaker, movie editing." },
+            { title: "Corporate IT Support", icon: "fa-solid fa-building-user", level: 95, desc: "Email setup, domain sharing, network printer setup, IT support for insurance & offices." }
+        ];
+
+        const galleryData = [
+            {
+                id: 1,
+                category: "cctv",
+                title: "IP CCTV Surveillance Installation",
+                tag: "CCTV & Fiber",
+                desc: "High-definition IP camera installation and fiber optic NVR network integration for educational and commercial clients.",
+                image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 2,
+                category: "hardware",
+                title: "Computer Hardware Maintenance & Diagnostics",
+                tag: "Hardware Repair",
+                desc: "Replacing faulty laptop/desktop motherboards, cleaning cooling units, and installing high-speed SSDs.",
+                image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 3,
+                category: "office",
+                title: "Insurance Office Network Infrastructure",
+                tag: "Office IT Support",
+                desc: "Managing network cabling, server backups, and employee IT workstations at Sagarmatha Lumbini Insurance Co. Ltd.",
+                image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 4,
+                category: "cctv",
+                title: "Mikrotik & Wireless Router Deployment",
+                tag: "CCTV & Fiber",
+                desc: "Configuring high-speed Wi-Fi access points and bandwidth routing for multi-story office setups.",
+                image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 5,
+                category: "hardware",
+                title: "OS & Enterprise Software Setup",
+                tag: "Hardware Repair",
+                desc: "Fresh installation of Windows 11, office security software, and automated data backups for corporate workstations.",
+                image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 6,
+                category: "office",
+                title: "On-Site Field Technical Training",
+                tag: "Office IT Support",
+                desc: "Providing client orientation on CCTV monitoring mobile apps and basic network troubleshooting.",
+                image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        // Lifecycle Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            renderSkills();
+            renderGallery('all');
+            document.getElementById('year-span').textContent = new Date().getFullYear();
+        });
+
+        // Theme Switcher
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                themeIcon.className = 'fa-solid fa-sun text-amber-500';
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-moon text-amber-400';
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Render Skills Section
+        function renderSkills() {
+            const container = document.getElementById('skills-container');
+            container.innerHTML = skillsData.map(s => `
+                <div class="glass-card p-6 rounded-3xl space-y-4 hover:border-cyanAccent-500/50 transition-colors">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-cyanAccent-500/10 text-cyanAccent-400 flex items-center justify-center text-xl">
+                            <i class="${s.icon}"></i>
+                        </div>
+                        <span class="text-xs font-black text-goldAccent-400 font-heading">${s.level}%</span>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold font-heading text-white dark:text-white light:text-slate-900">${s.title}</h3>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">${s.desc}</p>
+                    </div>
+                    <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                        <div class="bg-gradient-to-r from-cyanAccent-500 to-cyanAccent-400 h-2 rounded-full" style="width: ${s.level}%"></div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render Gallery
+        function renderGallery(filter = 'all') {
+            const grid = document.getElementById('gallery-grid');
+            const filtered = filter === 'all' ? galleryData : galleryData.filter(g => g.category === filter);
+
+            grid.innerHTML = filtered.map(g => `
+                <div onclick="openLightbox(${g.id})" class="glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-cyanAccent-500/50 transition-all cursor-pointer group flex flex-col justify-between">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="${g.image}" alt="${g.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/0b1329/38bdf8?text=IT+Work+Photo';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-techDark-950 via-transparent to-transparent opacity-80"></div>
+                        <span class="absolute top-3 left-3 text-[10px] font-black uppercase tracking-wider text-cyanAccent-400 bg-techDark-950/80 px-3 py-1 rounded-full border border-cyanAccent-500/30 backdrop-blur-md">
+                            ${g.tag}
+                        </span>
+                        <div class="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-cyanAccent-500 text-techDark-950 flex items-center justify-center text-sm shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="text-base font-bold text-white dark:text-white light:text-slate-900 group-hover:text-cyanAccent-400 transition-colors">${g.title}</h3>
+                        <p class="text-xs text-slate-400 line-clamp-2">${g.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterGallery(cat) {
+            document.querySelectorAll('.gallery-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-cyanAccent-500', 'text-techDark-950');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            event.target.classList.add('active', 'bg-cyanAccent-500', 'text-techDark-950');
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+            renderGallery(cat);
+        }
+
+        // Lightbox Handler
+        function openLightbox(id) {
+            const item = galleryData.find(g => g.id === id);
+            if (!item) return;
+            
+            document.getElementById('lightbox-img').src = item.image;
+            document.getElementById('lightbox-tag').textContent = item.tag;
+            document.getElementById('lightbox-title').textContent = item.title;
+            document.getElementById('lightbox-desc').textContent = item.desc;
+
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const service = document.getElementById('contact-service').value;
+            showToast(`धन्यवाद ${name}! Your inquiry for '${service}' has been submitted.`);
+            e.target.reset();
+        }
+
+        function downloadCV() {
+            showToast("Generating Rohit Prasad Adhikari's CV download...");
+            setTimeout(() => {
+                const cvContent = `====================================================
+ROHIT PRASAD ADHIKARI
+COMPUTER IT TECHNICIAN | HARDWARE, SOFTWARE & NETWORK SUPPORT
+Contact: +977-9827872066 | rohitprasadadhikari11@gmail.com
+Address: Manthali, Ramechhap, Nepal
+====================================================
+
+PROFILE:
+Skilled and dedicated IT Technician with 6+ years of experience in computer hardware, networking, CCTV installation (IP & Fiber), system troubleshooting, and IT support for corporate offices, insurance firms, and government offices.
+
+WORK EXPERIENCE:
+1. Sagarmatha Lumbini Insurance Company Ltd. (2022 - Present)
+   IT Support Technician, Kathmandu, Nepal
+   - Computer hardware & network system maintenance.
+   - Staff IT support (email, printer sharing, backups).
+   - Cybersecurity awareness & antivirus management.
+
+2. Numbur IT Solution (2018 - 2022)
+   Computer IT Technician, Manthali, Ramechhap
+   - Router, switch, fiber, and wireless network setup.
+   - CCTV installation in 25+ schools, offices, and shops.
+   - HTML/CSS web design for local businesses.
+
+3. Third Eye IT Solution (2017 - 2018)
+   IT Support Assistant, Kathmandu, Nepal
+   - Hardware diagnostics, LAN setup, CCTV support.
+
+TECHNICAL TOOLS:
+- OS: Windows 7/10/11, Basic Linux
+- Networking: D-Link, TP-Link, Mikrotik
+- CCTV: Hikvision, CP Plus, Dahua
+- Web/Design: HTML, CSS, Photoshop, PageMaker
+
+EDUCATION & CERTIFICATIONS:
+- Diploma in Computer Hardware & Software (2017-2020)
+- +2 Level Secondary Education (Jan Jagriti Secondary School, Bardibas)
+- Diploma in Computer Course Certificate (Numbur IT Solution 2075)
+====================================================`;
+                const blob = new Blob([cvContent], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = "Rohit_Prasad_Adhikari_CV.txt";
+                a.click();
+            }, 600);
+        }
+
+        function showToast(msg) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast-animate bg-cyanAccent-500 text-techDark-950 px-4 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-2xl flex items-center space-x-2 border border-cyanAccent-400';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check text-base"></i> <span>${msg}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
